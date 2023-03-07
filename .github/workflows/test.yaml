@@ -14,7 +14,8 @@ jobs:
         env:
           MONGO_INITDB_ROOT_USERNAME: root 
           MONGO_INITDB_ROOT_PASSWORD: example
-        ports: 27017:27017
+        ports: 
+          - 27017:27017
     steps:
       - name: checkout code
         uses: actions/checkout@v3
