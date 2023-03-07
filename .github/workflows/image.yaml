@@ -15,7 +15,7 @@ jobs:
       - name: docker login
         run: |
           echo $DOCKER_HUB_TOKEN > my_password.txt
-          cat ~/my_password.txt | docker login --username sericwang --password-stdin
+          cat my_password.txt | docker login --username sericwang --password-stdin
       - name: build image
         run: |
           docker image build -t sericwang/fastapi-demo:latest .
